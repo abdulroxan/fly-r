@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.accordion{
+    width: 100%;
+    padding: 18px;
+    transition: 0.4s;
+    background: #eee;
+    text-align: left;
+    border: none;
+    outline: none;
+
+}
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+.panel{
+    padding: 0 18px;
+   overflow: hidden;
+   background:white;
+   display: none;
+
+}
+
+    </style>
+</head>
+<body>
+    <h1>Accordion</h1>
+    <button class="accordion">Home</button>
+        <div class="panel">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+
+        <button class="accordion">About</button>
+        <div class="panel">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        
+        <button class="accordion">servaes</button>
+        <div class="panel">
+            <p>Lorem ipsum dolor sit amet, 
+               consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+
+        <button class="accordion">About</button>
+        <div class="panel">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        
+        <button class="accordion">servaes</button>
+        <div class="panel">
+            <p>Lorem ipsum dolor sit amet, 
+               consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+
+ <script>
+    let acc = document.getElementsByClassName("accordion");
+    let i;
+ for (i = 0; i < acc.length; i++){
+    acc[i].addEventListener("click", function (){
+      this.classList.toggle("active");
+      let panel =  this . nextElementSibling;
+      if( panel.style.display === "block"){
+   panel.style.display = "none";
+
+      }
+        else{
+            panel.style.display =  "block";
+        }
+    })
+ }
+    
+ </script>
+    </body>
+    </html>
